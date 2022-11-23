@@ -120,6 +120,15 @@ resource "google_compute_subnetwork" "proxy_only" {
   role = (
     each.value.active || each.value.active == null ? "ACTIVE" : "BACKUP"
   )
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
 }
 
 resource "google_compute_subnetwork" "psc" {
@@ -135,6 +144,15 @@ resource "google_compute_subnetwork" "psc" {
     : each.value.description
   )
   purpose = "PRIVATE_SERVICE_CONNECT"
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
+  private_ip_google_access = true
 }
 
 resource "google_compute_subnetwork_iam_binding" "binding" {
