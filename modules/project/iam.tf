@@ -89,7 +89,6 @@ resource "google_project_iam_member" "additive" {
 resource "google_project_iam_member" "oslogin_iam_serviceaccountuser" {
   for_each = var.oslogin ? toset(distinct(concat(var.oslogin_admins, var.oslogin_users))) : toset([])
   project  = local.project.project_id
-  role     = "roles/iam.serviceAccountUser"
   member   = each.value
 }
 
